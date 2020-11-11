@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'products/index'
+  resources :views
   get 'view/index'
   resources :appoinments
   #get 'home/index'
