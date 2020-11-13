@@ -13,20 +13,4 @@
  *= require_tree .
  *= require_self
  */
- .slider{
-   height: 100vh;
-   width:  100vh;
- }
- .color{
-	background:#66A438;
-	color: black;
-	margin: 15;
-	font-weight: 700;
-	font-size: 25px;
-	padding-top:200px;
-	padding-left: 120px;
-}
-.texto{
-	padding-top:180px;
-	padding-left: 100px;
-}
+ 
