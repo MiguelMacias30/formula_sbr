@@ -1,4 +1,6 @@
 <%= link_to "back", views_path %>
+<%= link_to 'ver carrito', orders_path %>
+<%= link_to "sing out", destroy_user_session_path, method: :delete, class:"btn btn-outline-primary"%>
 <h1>Productos</h1>
 
   <table>
@@ -14,6 +16,7 @@
         <td><%= image_tag(prod.photo, size: '200x150')%></td>
         <td><%= prod.name%></td>
         <td><%= number_to_currency(prod.price, unit: "BOB$", precision: 0)%></td>
+        <td><%= link_to 'agregar al carro', product_orders_path(prod.id), method: :post %></td>
       </tr>
       <% end %>
     </tbody>
