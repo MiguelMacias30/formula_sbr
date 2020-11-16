@@ -25,7 +25,7 @@ class AppoinmentsController < ApplicationController
   # POST /appoinments.json
   def create
     @appoinment = Appoinment.new(appoinment_params)
-
+    @appoinment.user_id = current_user.id 
     respond_to do |format|
       if @appoinment.save
         format.html { redirect_to @appoinment, notice: 'Appoinment was successfully created.' }

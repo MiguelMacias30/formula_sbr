@@ -6,7 +6,10 @@ Rails.application.routes.draw do
   get 'view/index'
   resources :appoinments
   #get 'home/index'
-  devise_for :users
+  devise_for :users, controllers: {
+        registrations: 'users/registrations'
+      }
+
 
   resources :products, only: :index do
     resources :orders, only: :create

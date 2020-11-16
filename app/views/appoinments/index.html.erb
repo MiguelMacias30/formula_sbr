@@ -17,8 +17,8 @@
     <% @appoinments.each do |appoinment| %>
       <tr>
         <td><%= appoinment.day %></td>
-        <td><%= appoinment.service %></td>
-        <td><%= appoinment.user %></td>
+        <td><%= appoinment.service.name %></td>
+        <td><%= appoinment.user.name %></td>
         <td><%= link_to 'Show', appoinment %></td>
         <td><%= link_to 'Edit', edit_appoinment_path(appoinment) %></td>
         <td><%= link_to 'Destroy', appoinment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
