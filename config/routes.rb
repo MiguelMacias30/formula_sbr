@@ -19,6 +19,13 @@ resources :orders, only: :index
 
 delete 'orders/clean', to: 'orders#clean', as: 'clean_orders'
 delete 'orders/:id', to: 'orders#destroy', as: 'destroy_order'
+
+resources :billings, only:[] do
+  	collection do
+  		get 'pre-pay'
+  		get 'execute'
+  	end
+  end 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root 'home#index'
 end

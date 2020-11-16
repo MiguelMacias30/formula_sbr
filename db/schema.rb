@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_14_224938) do
+ActiveRecord::Schema.define(version: 2020_11_16_203535) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
@@ -48,6 +48,17 @@ ActiveRecord::Schema.define(version: 2020_11_14_224938) do
     t.index ["user_id"], name: "index_appoinments_on_user_id"
   end
 
+  create_table "billings", force: :cascade do |t|
+    t.string "code"
+    t.string "payment_method"
+    t.decimal "amount", precision: 5, scale: 2
+    t.string "currency"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_billings_on_user_id"
+  end
+
   create_table "orders", force: :cascade do |t|
     t.boolean "paid", default: false
     t.integer "quantity", default: 0
@@ -55,6 +66,8 @@ ActiveRecord::Schema.define(version: 2020_11_14_224938) do
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "billing_id"
+    t.index ["billing_id"], name: "index_orders_on_billing_id"
     t.index ["product_id"], name: "index_orders_on_product_id"
     t.index ["user_id"], name: "index_orders_on_user_id"
   end

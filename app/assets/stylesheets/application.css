@@ -13,9 +13,13 @@
  require_tree .
  *= require_self
  */
-body{
+body {
   font-family: 'Sriracha', cursive;
+
+
 }
-.home{
+.home img{
    text-align: center;
-}
+   border-radius: 125px;
+
+ }

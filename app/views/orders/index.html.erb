@@ -30,5 +30,5 @@
 </table>
 <p>total: <%= number_to_currency(total, unit: "BOB$", precision: 0) %></p>
 <p><%= link_to 'vaciar carrito', clean_orders_path, method: :delete %></p>
-
+<p><%= link_to 'pagar', pre_pay_billings_path %></p>
 <% end %>
