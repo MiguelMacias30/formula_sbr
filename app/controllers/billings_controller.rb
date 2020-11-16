@@ -13,7 +13,7 @@ class BillingsController < ApplicationController
 			item[:name] = order.product.name
 			item[:sku] = order.product.id.to_s
 			item[:price] = order.product.price
-			item[:currency] = 'BOB'
+			item[:currency] = 'USD'
 			item[:quantity] = order.quantity
 			item
   end
@@ -34,7 +34,7 @@ class BillingsController < ApplicationController
           },
           amount: {
             total: total.to_s,
-            currency: 'BOB'
+            currency: 'USD'
           },
           description: 'compra desde mi taller en rails'
           }
@@ -46,7 +46,7 @@ class BillingsController < ApplicationController
 			redirect_url = payment.links.find{|link| link.method == 'REDIRECT'}.href
 			redirect_to redirect_url
     else
-    render json: payment.errors
+      render json: payment.errors
     end
   end
 
@@ -62,7 +62,7 @@ class BillingsController < ApplicationController
      				code: paypal_payment.id,
      				amount: amount.to_f,
      				payment_method: 'paypal',
-     				currency: 'BOB'
+     				currency: 'USD'
      			)
 
           orders = current_user.orders.where(paid: false)
@@ -73,6 +73,6 @@ class BillingsController < ApplicationController
 
       else
           redirect_to products_path, notice: 'no se ha podido realizar el pago con paypal'
-      end     
+      end
   end
 end
