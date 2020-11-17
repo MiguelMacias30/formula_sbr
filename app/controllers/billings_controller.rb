@@ -13,7 +13,7 @@ class BillingsController < ApplicationController
 			item[:name] = order.product.name
 			item[:sku] = order.product.id.to_s
 			item[:price] = order.product.price
-			item[:currency] = 'BOB'
+			item[:currency] = 'USD'
 			item[:quantity] = order.quantity
 			item
   end
@@ -24,17 +24,17 @@ class BillingsController < ApplicationController
 				payment_method: 'paypal'
 			},
 			redirect_urls: {
-				return_url: 'localhost:3000/billings/execute',
-				cancel_url: 'localhost:3000'
+				return_url: 'https://localhost:3000/billings/execute',
+				cancel_url: 'https://localhost:3000'
       },
-      transaction: [
+      transactions: [
         {
           item_list:{
             items: items
           },
           amount: {
             total: total.to_s,
-            currency: 'BOB'
+            currency: 'USD'
           },
           description: 'compra desde mi taller en rails'
           }
@@ -62,7 +62,7 @@ class BillingsController < ApplicationController
      				code: paypal_payment.id,
      				amount: amount.to_f,
      				payment_method: 'paypal',
-     				currency: 'BOB'
+     				currency: 'USD'
      			)
 
           orders = current_user.orders.where(paid: false)

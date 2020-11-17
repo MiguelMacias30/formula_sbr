@@ -7,12 +7,12 @@
 
 <p>
   <strong>Service:</strong>
-  <%= @appoinment.service %>
+  <%= @appoinment.service.name %>
 </p>
 
 <p>
   <strong>User:</strong>
-  <%= @appoinment.user %>
+  <%= @appoinment.user.name %>
 </p>
 
 <%= link_to 'Edit', edit_appoinment_path(@appoinment) %> |
