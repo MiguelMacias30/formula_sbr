@@ -7,4 +7,5 @@ class User < ApplicationRecord
   has_many :products, through: :orders
   has_many :appoinments
   has_many :billings
+  has_many :services
 end
