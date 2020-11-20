@@ -28,5 +28,10 @@ ActiveAdmin.register_page "Dashboard" do
     #     end
     #   end
     # end
+    columns do
+        column do
+        line_chart Appoinment.group(:day).count
+    end
+  end 
   end # content
 end

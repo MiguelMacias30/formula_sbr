@@ -14,7 +14,7 @@
   </thead>
 
   <tbody>
-    <% @appoinments.each do |appoinment| %>
+    <% current_user.appoinments.each do |appoinment| %>
       <tr>
         <td><%= appoinment.day %></td>
         <td><%= appoinment.service.name %></td>

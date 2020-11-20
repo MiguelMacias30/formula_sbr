@@ -4,6 +4,13 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
+    <%= f.input :name,
+               required: true,
+               autofocus: true,
+               input_html: { autocomplete: "name" }%>
+   <%= f.input :license_plate,
+               required: true,
+               input_html: { autocomplete: "license_plate" }%> 
     <%= f.input :email, required: true, autofocus: true %>
 
     <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
@@ -19,7 +26,7 @@
                 input_html: { autocomplete: "new-password" } %>
     <%= f.input :number,
                 required: true,
-                input_html: { autocomplete: "number" }%>            
+                input_html: { autocomplete: "number" }%>
     <%= f.input :current_password,
                 hint: "we need your current password to confirm your changes",
                 required: true,
