@@ -5,6 +5,11 @@ class AppoinmentsController < ApplicationController
   # GET /appoinments.json
   def index
     @appoinments = Appoinment.all
+    info_mail(
+           mail: 'miguelfernandomacias@gmail.com',
+           subject: 'bienvenido',
+           message: 'a tu vista de citas'
+        )
   end
 
   # GET /appoinments/1
@@ -25,7 +30,7 @@ class AppoinmentsController < ApplicationController
   # POST /appoinments.json
   def create
     @appoinment = Appoinment.new(appoinment_params)
-    @appoinment.user_id = current_user.id 
+    @appoinment.user_id = current_user.id
     respond_to do |format|
       if @appoinment.save
         format.html { redirect_to @appoinment, notice: 'Appoinment was successfully created.' }

@@ -5,11 +5,11 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable,
          :omniauthable, :omniauth_providers => [:facebook]
 
-  has_many :orders
+  has_many :orders, dependent: :destroy
   has_many :products, through: :orders
-  has_many :appoinments
-  has_many :billings
-  has_many :services
+  has_many :appoinments, dependent: :destroy
+  has_many :billings, dependent: :destroy
+  has_many :services, dependent: :destroy
 
   def self.from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
