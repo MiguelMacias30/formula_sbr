@@ -5,11 +5,11 @@ class AppoinmentsController < ApplicationController
   # GET /appoinments.json
   def index
     @appoinments = Appoinment.all
-    info_mail(
-           mail: 'miguelfernandomacias@gmail.com',
-           subject: 'bienvenido',
-           message: 'a tu vista de citas'
-        )
+    #info_mail(
+           #mail: 'miguelfernandomacias@gmail.com',
+           #subject: 'bienvenido',
+           #message: 'a tu vista de citas'
+        #)
   end
 
   # GET /appoinments/1
