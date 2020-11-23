@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
 				edit_user_registration_path
 		end
 	end
-
+end
 
 def info_mail(mail:, subject:, message:)
   	mg_client = Mailgun::Client.new('ebb4dd3e3946b6b70eb8292175da147f-2af183ba-a4cb376a')
