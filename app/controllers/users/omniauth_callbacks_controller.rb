@@ -5,17 +5,17 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   # devise :omniauthable, omniauth_providers: [:twitter]
 
   # You should also create an action method in this controller like this:
-  def facebook
-    @user = User.from_omniauth(request.env["omniauth.auth"])
+  #def facebook
+    #@user = User.from_omniauth(request.env["omniauth.auth"])
 
-    if @user.persisted?
-      sign_in_and_redirect @user, data:{alert: 'has iniciado sesion'}
+    #if @user.persisted?
+      #sign_in_and_redirect @user, data:{alert: 'has iniciado sesion'}
 
-      set_flash_message(:notice, :success, kind: 'facebook') if is_navigational_format?
-    else
-      redirect_to root_path, notice:'error al iniciar sesion con facebook'
-    end
-  end
+      #set_flash_message(:notice, :success, kind: 'facebook') if is_navigational_format?
+    #else
+      #redirect_to root_path, notice:'error al iniciar sesion con facebook'
+    #end
+  
 
   # More info at:
   # https://github.com/heartcombo/devise#omniauth
