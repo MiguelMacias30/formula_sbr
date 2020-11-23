@@ -15,7 +15,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     else
       redirect_to root_path, notice:'error al iniciar sesion con facebook'
   end
-
+end
 
   # More info at:
   # https://github.com/heartcombo/devise#omniauth
