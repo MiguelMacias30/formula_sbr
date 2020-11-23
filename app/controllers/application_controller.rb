@@ -4,24 +4,24 @@ class ApplicationController < ActionController::Base
 		if resource.is_a?(Admin)
 			admin_dashboard_path
 		else
-      #if resource.provider.nil? && !resource.number.nil? || !resource.license_plate.nil?
+      if resource.provider.nil? && !resource.number.nil? || !resource.license_plate.nil?
 				views_path
-			#else
-				#edit_user_registration_path
+			else
+				edit_user_registration_path
 		end
 	end
 
 
-#def info_mail(mail:, subject:, message:)
-  	#mg_client = Mailgun::Client.new('ebb4dd3e3946b6b70eb8292175da147f-2af183ba-a4cb376a')
+def info_mail(mail:, subject:, message:)
+  	mg_client = Mailgun::Client.new('ebb4dd3e3946b6b70eb8292175da147f-2af183ba-a4cb376a')
 
-  	#ms_params = {
-  		#from: 'miguel@sandbox8fb6706e759c4b11ad764b6875b90fbb.mailgun.org',
-  		#to: mail,
-  		#subject: subject,
-  		#text: message
-  	#}
+  	ms_params = {
+  		from: 'miguel@sandbox8fb6706e759c4b11ad764b6875b90fbb.mailgun.org',
+  		to: mail,
+  		subject: subject,
+  		text: message
+  	}
 
-  	#mg_client.send_message('sandbox8fb6706e759c4b11ad764b6875b90fbb.mailgun.org', ms_params)
-  #end
-#end
+  	mg_client.send_message('sandbox8fb6706e759c4b11ad764b6875b90fbb.mailgun.org', ms_params)
+  end
+end
