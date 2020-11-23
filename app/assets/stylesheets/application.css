@@ -21,5 +21,17 @@ body {
 .home img{
    text-align: center;
    border-radius: 125px;
-
- }
+}
+.slider{
+  height: 100vh;
+  width:  100vh;
+}
+.color{
+	background:#558006  ;
+	color: white;
+	margin: 15;
+	font-weight: 700;
+	font-size: 25px;
+	padding-top:200px;
+	padding-left: 120px;
+}
