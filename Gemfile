@@ -17,7 +17,6 @@ gem 'uglifier', '>= 1.3.0'
 gem 'simple_form'
 gem 'devise'
 gem 'bootstrap'
-gem 'jquery-rails'
 gem 'activeadmin'
 gem 'omniauth-facebook'
 gem 'mailgun-ruby'
@@ -39,7 +38,7 @@ gem 'paypal-sdk-rest'
 
 group :production do
   gem 'pg'
-end 
+end
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
