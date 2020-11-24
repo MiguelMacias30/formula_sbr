@@ -36,7 +36,7 @@
         <tbody>
           <% current_user.appoinments.each do |appoinment| %>
             <tr>
-              <td><%= appoinment.day.strftime("%d/%m/%Y %H:%M") %></td>
+              <td><%= appoinment.day %></td>
               <td><%= appoinment.service.name %></td>
               <td><%= appoinment.user.name %></td>
               <td><%= link_to 'ver', appoinment, class:"text-danger"%></td>
