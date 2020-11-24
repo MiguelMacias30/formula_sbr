@@ -1,15 +1,16 @@
 
-<%= simple_form_for(@appoinment) do |f| %>
-  <%= f.error_notification %>
-  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+<%= form_for(@appoinment) do |f| %>
+  <%#= f.error_notification %>
+  <%#= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
   <div class="form-inputs ">
-    <%= f.input :day %>
-    <%= f.association :service %>
+    <%= f.datetime_field :day, input_html: {class:"form-control"} %>
+    <%= f.select(:service_id, Service.all.collect{|s|[s.name,s.id]}, prompt:"selecciona tu servicio") %>
+    <%#= f.association :service %>
     <%#= f.association :user %>
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit %>
+    <%= f.button "Agendar Cita", class:"btn btn-outline-success mt-3" %>
   </div>
 <% end %>

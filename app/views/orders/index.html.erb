@@ -1,10 +1,32 @@
-<h1>carrito</h1>
-<%= link_to 'productos', products_path %>
+<nav class="navbar navbar-expand-lg navbar-light bg-success">
+  <span class="ml-5 logo"><img src="https://scontent.fvvi1-2.fna.fbcdn.net/v/t1.0-9/99138498_108166570906198_6740738930968100864_n.jpg?_nc_cat=102&ccb=2&_nc_sid=85a577&_nc_ohc=BOY_PeIXCBgAX-D9nkM&_nc_ht=scontent.fvvi1-2.fna&oh=ffb9c712b6e93aa6db0c91cfb753c3da&oe=5FD6E817" height="100" width="100" alt=""></span>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link"<%=link_to "INICIO", views_path %></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link"<%=link_to "PRODUCTOS", products_index_path %></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link"<%= link_to "CERRAR SESION", destroy_user_session_path, method: :delete, class:"btn btn-outline-success"%></a>
+      </li>
+    </ul>
+  </div>
+</nav>
 
-<% if @orders.length < 1 %>
-	<h3>NO hay productos en el carrito</h3>
-<% else %>
-	<table>
+
+<div class="container">
+	<h1 class="text-center my-5">Carrito</h1>
+
+
+	<% if @orders.length < 1 %>
+		<h3>NO hay productos en el carrito</h3>
+	<% else %>
+	<table class="table table-bordered">
 	<thead>
 		<th>Foto</th>
 		<th>Nombre</th>
@@ -29,6 +51,15 @@
 	</tbody>
 </table>
 <p>total: <%= number_to_currency(total, unit: "BOB$", precision: 0) %></p>
-<p><%= link_to 'vaciar carrito', clean_orders_path, method: :delete %></p>
-<p><%= link_to 'pagar', pre_pay_billings_path %></p>
+
+<div class="d-flex">
+	<%= link_to 'vaciar carrito', clean_orders_path, method: :delete, class:"btn btn-lg btn-outline-success mr-2" %>
+
+	<%= link_to  pre_pay_billings_path do %>
+			<i class=" fa-3x fab fa-cc-paypal"></i>
+	<% end %>
+</div>
+
 <% end %>
+
+</div>

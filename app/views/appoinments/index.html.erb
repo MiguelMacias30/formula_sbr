@@ -23,7 +23,7 @@
     <div class=" col-6 slider pl-5 pt-5">
       <h1>CITAS</h1>
       <h2>Genera Tus Citas y disfruta de la experiencia</h2>
-      <table>
+      <table class="table table-bordered">
         <thead>
           <tr>
             <th>Dia</th>
@@ -36,11 +36,11 @@
         <tbody>
           <% current_user.appoinments.each do |appoinment| %>
             <tr>
-              <td><%= appoinment.day %></td>
+              <td><%= appoinment.day.strftime("%d/%m/%Y %H:%M") %></td>
               <td><%= appoinment.service.name %></td>
               <td><%= appoinment.user.name %></td>
-              <td><%= link_to 'ver', appoinment %></td>
-              <td><%= link_to 'borrar', appoinment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              <td><%= link_to 'ver', appoinment, class:"text-danger"%></td>
+              <td><%= link_to 'borrar', appoinment,class:"text-danger", method: :delete, data: { confirm: 'Are you sure?' } %></td>
             </tr>
           <% end %>
         </tbody>
@@ -48,7 +48,7 @@
 
       <br>
 
-      <button class=" link btn btn-ouline bg-success"><%= link_to 'Nueva cita', new_appoinment_path %></button>
+    <%= link_to 'Nueva cita', new_appoinment_path, class:"btn btn-outline-success" %>
 
     </div>
 

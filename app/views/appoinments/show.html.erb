@@ -24,21 +24,21 @@
     <div class=" col-6 slider text-center">
       <h2 class="my-5">TU CITA ESTA AGENDADA PARA EL:</h2>
       <p>
-        <strong>Day:</strong>
-        <%= @appoinment.day %>
+        <strong>Dia:</strong>
+        <%= @appoinment.day.strftime("%d/%m/%Y %H:%M") %>
       </p>
 
       <p>
-        <strong>Service:</strong>
+        <strong>Servicio:</strong>
         <%= @appoinment.service.name %>
       </p>
 
       <p>
-        <strong>User:</strong>
+        <strong>Usuario:</strong>
         <%= @appoinment.user.name %>
       </p>
 
-      <%= link_to 'Modificar La Cita', edit_appoinment_path(@appoinment) %>
+      <%= link_to 'Modificar La Cita', edit_appoinment_path(@appoinment), class:"btn btn-outline-success" %>
 
       <h2 class="my-5">DIRIGITE A:</h2>
       <h3><i class="fas fa-map-marker-alt"></i>AV FUERZA AEREA ESQUINA JUAN PABLO II</h3>
