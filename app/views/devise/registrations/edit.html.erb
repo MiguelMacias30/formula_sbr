@@ -1,9 +1,9 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<h2>Editar <%= resource_name.to_s.humanize %></h2>
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= f.error_notification %>
 
-  <div class="form-inputs">
+  <div class="form-control">
     <%= f.input :name,
                required: true,
                autofocus: true,
@@ -27,7 +27,7 @@
     <%= f.input :number,
                 required: true,
                 input_html: { autocomplete: "number" }%>
-  
+
   </div>
 
   <div class="form-actions">

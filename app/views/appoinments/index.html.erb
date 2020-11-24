@@ -1,32 +1,60 @@
-<p id="notice"><%= notice %></p>
+<nav class="navbar navbar-expand-lg navbar-light bg-success">
+  <span class="ml-5 logo"><img src="https://scontent.fvvi1-2.fna.fbcdn.net/v/t1.0-9/99138498_108166570906198_6740738930968100864_n.jpg?_nc_cat=102&ccb=2&_nc_sid=85a577&_nc_ohc=BOY_PeIXCBgAX-D9nkM&_nc_ht=scontent.fvvi1-2.fna&oh=ffb9c712b6e93aa6db0c91cfb753c3da&oe=5FD6E817" height="100" width="100" alt=""></span>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link"<%=link_to "INICIO", views_path %></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link"<%=link_to "PRODUCTOS", products_index_path %></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link"<%= link_to "CERRAR SESION", destroy_user_session_path, method: :delete, class:"btn btn-outline-success"%></a>
+      </li>
+    </ul>
+  </div>
+</nav>
 
-<h1>CITAS</h1>
-<%=link_to "back", views_path %>
-<%= link_to "sing out", destroy_user_session_path, method: :delete, class:"btn btn-outline-primary"%>
-<table>
-  <thead>
-    <tr>
-      <th>Dia</th>
-      <th>Servicio</th>
-      <th>Usuario</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<div class="container-fluid">
+  <div class="row">
+    <div class=" col-6 slider pl-5 pt-5">
+      <h1>CITAS</h1>
+      <h2>Genera Tus Citas y disfruta de la experiencia</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Dia</th>
+            <th>Servicio</th>
+            <th>Usuario</th>
+            <th colspan="3"></th>
+          </tr>
+        </thead>
 
-  <tbody>
-    <% current_user.appoinments.each do |appoinment| %>
-      <tr>
-        <td><%= appoinment.day %></td>
-        <td><%= appoinment.service.name %></td>
-        <td><%= appoinment.user.name %></td>
-        <td><%= link_to 'Show', appoinment %></td>
-        <td><%= link_to 'Edit', edit_appoinment_path(appoinment) %></td>
-        <td><%= link_to 'Destroy', appoinment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+        <tbody>
+          <% current_user.appoinments.each do |appoinment| %>
+            <tr>
+              <td><%= appoinment.day %></td>
+              <td><%= appoinment.service.name %></td>
+              <td><%= appoinment.user.name %></td>
+              <td><%= link_to 'ver', appoinment %></td>
+              <td><%= link_to 'borrar', appoinment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
 
-<br>
+      <br>
 
-<%= link_to 'Nueva cita', new_appoinment_path %>
+      <button class=" link btn btn-ouline bg-success"><%= link_to 'Nueva cita', new_appoinment_path %></button>
+
+    </div>
+
+    <div class="col-6 date">
+
+    </div>
+  </div>
+
+</div>

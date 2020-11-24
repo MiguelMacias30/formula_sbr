@@ -27,11 +27,55 @@ body {
   width:  100vh;
 }
 .color{
-	background:#558006  ;
+	background:#366319;
 	color: white;
 	margin: 15;
 	font-weight: 700;
 	font-size: 25px;
 	padding-top:200px;
 	padding-left: 120px;
+}
+.texto{
+  background-color: #34495E ;
+  padding-top:150px;
+	padding-left: 100px;
+}
+.texto img{
+  border-radius: 125px;
+}
+.login{
+  text-align: center;
+  height: 670px;
+  width: 100%;
+
+}
+ .login2{
+   background-image: url('https://img.genial.ly/5991ebaaa3a6171c38971d6b/fb3aeb5e-e846-4aee-a6b9-7c99522881c4.jpeg');
+   background-repeat: no-repeat;
+   background-size:cover;
+}
+.logo img{
+  border-radius: 50px;
+}
+footer{
+  background-color: #34495E;
+  height: 120px;
+  color: white;
+}
+footer i{
+  padding-right: 50px;
+}
+.date{
+  background-image:url('https://pbs.twimg.com/media/EA0M76JXoAIJosE.jpg:large');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.link{
+  color:white;
+  text-decoration: none;
+}
+.show{
+  background-image: url('https://pbs.twimg.com/media/ECBl3rfXkAEQVNf.jpg:large');
+  background-size: cover;
+  background-repeat: no-repeat;
 }

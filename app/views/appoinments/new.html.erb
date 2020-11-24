@@ -1,5 +1,82 @@
-<h1>New Appoinment</h1>
+<nav class="navbar navbar-expand-lg navbar-light bg-success">
+  <span class="ml-5 logo"><img src="https://scontent.fvvi1-2.fna.fbcdn.net/v/t1.0-9/99138498_108166570906198_6740738930968100864_n.jpg?_nc_cat=102&ccb=2&_nc_sid=85a577&_nc_ohc=BOY_PeIXCBgAX-D9nkM&_nc_ht=scontent.fvvi1-2.fna&oh=ffb9c712b6e93aa6db0c91cfb753c3da&oe=5FD6E817" height="100" width="100" alt=""></span>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link"<%=link_to "CITAS", appoinments_path %></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link"<%=link_to "PRODUCTOS", products_index_path %></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link"<%= link_to "CERRAR SESION", destroy_user_session_path, method: :delete, class:"btn btn-outline-success"%></a>
+      </li>
+    </ul>
+  </div>
+</nav>
 
-<%= render 'form', appoinment: @appoinment %>
 
-<%= link_to 'Back', appoinments_path %>
+
+<div class="text-center my-5">
+  <h1 class="pb-3">NUEVA CITA</h1>
+
+  <span class=""><%= render 'form', appoinment: @appoinment %></span>
+
+  </div>
+
+<div class="container">
+  <h2 class="text-center my-5">NUESTROS SERVICIOS</h2>
+  <div class="card-deck">
+  <div class="card">
+    <img src="https://pbs.twimg.com/media/EA0M76JXoAIJosE.jpg:large" height="300px"class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">RECALIFICACION</h5>
+      <p class="card-text">cada 5 años y por un total de 20 se determina la vigencia del cilindro mediante pruebas de presión hidráulica, ultrasonido, pruebas de desgaste, medición de espesores y otras</p>
+    </div>
+  </div>
+  <div class="card">
+    <img src="https://chevronorte.com/wp-content/uploads/2019/04/reparaciones-de-aver%C3%ADas-el%C3%A9ctricas-taller-san-mart%C3%ADn-taller-mec%C3%A1nico-en-portugalete-bizkaia-min.jpg"  height="300px"class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">MECANICA GENERAL</h5>
+      <p class="card-text"> Diagnóstico y reparación de averías generadas en cualquiera de las diferentes partes del automóvil: equipo motopropulsor, sistema de suspensión , dirección , frenado, transmisión, etc.</p>
+
+    </div>
+  </div>
+  <div class="card">
+    <img src="https://german7644dotcom.files.wordpress.com/2012/01/conversion-vehiculos.png" height="300px" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">CONVERSION</h5>
+      <p class="card-text">conversion completa de gasolina a gas en el automovil, manteniendo especificaciones y regulaciones nacionales.</p>
+
+    </div>
+  </div>
+</div>
+<div class=" my-5 card-deck">
+<div class="card">
+  <img src="https://lh3.googleusercontent.com/proxy/wE9qVTPlbxX_I2cV0oDneJNblH0vLn94IZyB_km4iN2rTanQXrysmgcszkaI8hI5nHvr57L868cN8dyGcDqV5FBdip8xj7mdbFZC8gYVwLsmvyM782w" height="300px"class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">HABILITACION</h5>
+    <p class="card-text">cada año y mediante la plataforma virtual hydro se habilita a los usuarios para la carga de gas previa inspeccion y registro del equipo de gas.</p>
+
+  </div>
+</div>
+<div class="card">
+  <img src="https://cdnimg.bnamericas.com/gmygRyWXWYkeuzlFChTheuyecbigSEYuQQfSIxiAmximJdyIDCMWZcRCtxThvDbi.jpg"  height="300px"class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">MANTENIMIENTO</h5>
+    <p class="card-text">consiste en revisar todos los accesorios correspondientes al equipo de gas, el cilindro, realizarles el respectivo mantimiento y limpieza para su correcto uso.</p>
+  </div>
+</div>
+<div class="card">
+  <img src="https://www.bardahlindustria.com/wp-content/uploads/2019/02/Hidr%C3%A1ulica-Industria.jpg" height="300px" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">HIDRAULICA</h5>
+    <p class="card-text">Mantenimiento y reparacion de todo tipo de maquinaria hidraulica, desde compresoras, gatas hidraulicas a maquinaria pesada</p>
+  </div>
+</div>
+</div>
+
+</div>

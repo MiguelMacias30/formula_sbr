@@ -1,8 +1,67 @@
-<p id="notice"><%= notice %></p>
+<nav class="navbar navbar-expand-lg navbar-light bg-success">
+  <span class="ml-5 logo"><img src="https://scontent.fvvi1-2.fna.fbcdn.net/v/t1.0-9/99138498_108166570906198_6740738930968100864_n.jpg?_nc_cat=102&ccb=2&_nc_sid=85a577&_nc_ohc=BOY_PeIXCBgAX-D9nkM&_nc_ht=scontent.fvvi1-2.fna&oh=ffb9c712b6e93aa6db0c91cfb753c3da&oe=5FD6E817" height="100" width="100" alt=""></span>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link"<%=link_to "CITAS", appoinments_path %></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link"<%=link_to "PRODUCTOS", products_index_path %></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link"<%= link_to "CERRAR SESION", destroy_user_session_path, method: :delete, class:"btn btn-outline-success"%></a>
+      </li>
+    </ul>
+  </div>
+</nav>
 
-<h1>Se Parte del Mundo del gas</h1>
-<h2>formula sbr!</h2>
+<header>
+  <div class="text-center pt-3">
+    <h1>Se Parte del Mundo del gas</h1>
+    <h2>formula sbr!</h2>
+  </div>
 
-<%=link_to  "CITAS", appoinments_path %>
-<%=link_to  "PRODUCTOS", products_index_path %>
-<%= link_to "sing out", destroy_user_session_path, method: :delete, class:"btn btn-outline-success"%>
+  <div class="container mt-5">
+    <h2>GNV Y SUS VENTAJAS</h2>
+    <ul>
+      <li>Mayor eficiencia energética gracias a su composición química (CH4)</li>
+      <li>Bajo costo y alto rendimiento, con lo que se asegura un gran ahorro en el gasto de combustibles</li>
+      <li>El GNV emite menos gases de efecto invernadero como CO2, CO y NOX</li>
+      <li>Por su combustión con residuos carbonosos, disminuye la contaminación del aceite del motor, prolongando su vida útil.</li>
+    </ul>
+  </div>
+</header>
+
+
+<section>
+  <h2 class="text-center mt-5">AUTORIDADES</h2>
+  <div class=" container d-flex justify-content-around my-5">
+    <div class="card" style="width: 18rem;">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRn5OTn68UFLVlXydIPzbbfOzOFWjS5zBhgPg&usqp=CAU" height="300px"class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title text-center">Agencia Nacional De Hidrocarburos</h5>
+          <a href="https://www.anh.gob.bo/w2019/" class="btn btn-success">sitio web</a>
+      </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+      <img src="https://www.eecgnv.gob.bo/wp-content/uploads/2020/08/WhatsApp-Image-2020-08-24-at-11.02.18.jpeg" height="300px" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title text-center">Ministerios De Hidrocarburos</h5>
+          <a href="https://www.hidrocarburos.gob.bo/" class="btn btn-success">sitio web</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class=" container-fluid d-flex align-items-center justify-content-around">
+  <ul>
+    <i class="fas fa-map-marker-alt"><a>Av Fuerza Aerea Esq Juan Pablo II</a></i>
+    <i class="fab fa-whatsapp-square"><a>61855589-72966494</a></i>
+    <i class="fas fa-phone-alt"><a>466-75657</a></i>
+    <i class="fab fa-facebook"><a>Formula SBR</a></i>
+  </ul>
+</footer>
