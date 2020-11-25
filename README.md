@@ -12,6 +12,9 @@
 
 yo como visita ingreso al registro de usuarios y en el formulario       debo escribir mi nombre, mi email, mi dirección y mi password, al       registrarme e ingresar, mi nombre aparecerá como usuario actual y me    llevara a la pagina principal, donde podre ingresar a la actividad      que quiera realizar están estipulada en la aplicación
 
+## Registro Con Facebook
+yo como usuario ingreso a la aplicación, le doy en la opción registrarme con facebook y esta me lleva por una única vez a una vista edit a completar el registro de datos que me faltan para el correcto funcionamiento de la aplicación.
+
 ## Vista De Opciones Al Ingresar
 
 yo como usuario al registrarme e ingresar, me encuentro con una vista    que me da dos opciones citas y productos
@@ -34,6 +37,18 @@ yo como usuario, después de agregar todos los productos al carrito, puedo dar l
 ## Vista Del Carrito De Compras
 yo como usuario, cuando seleccione los productos tengo la opción de ingresar a una vista donde están todos los productos que escogí y se muestra la cantidad que pienso adquirir
 
+
+# ***Gemas***
+
+ - gem 'simple_form'
+ - gem 'devise'
+ - gem 'bootstrap'
+ - gem 'activeadmin'
+ - gem 'omniauth-facebook'
+ - gem 'mailgun-ruby'
+ - gem 'chartkick'
+
+
 # ***Recursos***
 
  - ##  [Bootstrap](https://getbootstrap.com/)
@@ -47,3 +62,11 @@ yo como usuario, cuando seleccione los productos tengo la opción de ingresar a 
 
 
  - ## [JQuery](https://jquery.com/)
+
+ # ***Contacto***
+
+ ## Miguel Macias
+
+  - https://github.com/MiguelMacias30
+
+  - miguelfernandomacias@gmail.com
