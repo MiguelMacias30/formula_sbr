@@ -12,7 +12,7 @@
 
 yo como visita ingreso al registro de usuarios y en el formulario       debo escribir mi nombre, mi email, mi dirección y mi password, al       registrarme e ingresar, mi nombre aparecerá como usuario actual y me    llevara a la pagina principal, donde podre ingresar a la actividad      que quiera realizar están estipulada en la aplicación
 
-## Vista de opciones al ingresar
+## Vista De Opciones Al Ingresar
 
 yo como usuario al registrarme e ingresar, me encuentro con una vista    que me da dos opciones citas y productos
 
@@ -48,4 +48,3 @@ yo como usuario, cuando seleccione los productos tengo la opción de ingresar a 
 
 
  - ## JQuery
- 
