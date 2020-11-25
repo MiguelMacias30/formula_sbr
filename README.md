@@ -36,15 +36,14 @@ yo como usuario, cuando seleccione los productos tengo la opción de ingresar a 
 
 # ***Recursos***
 
- - ## Bootstrap
-
- - ## Ruby On Rails
-
-
-
- - ## HTML5
- - ## CSS3
+ - ##  [Bootstrap](https://getbootstrap.com/)
+ - ## [Ruby On Rails](https://rubyonrails.org/)
 
 
 
- - ## JQuery
+ - ## [HTML5](https://www.w3schools.com/html/)
+ - ## [CSS3](https://www.w3schools.com/css/)
+
+
+
+ - ## [JQuery](https://jquery.com/)
