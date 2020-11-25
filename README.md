@@ -1,4 +1,4 @@
-# Proyecto final -# FORMULA SBR.
+# Proyecto final - FORMULA SBR.
 
 ## link a historia de usuarios con trello: https://trello.com/b/9K81Se98/proyectofinal
 
